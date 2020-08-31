@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delegación eventos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="" id="frmTest">
+        <div class="campo">
+            <label>Nombres:
+                <input type="text" id="nombres">
+            </label>
+            
+        </div>
+        <br>
+        <div class="campo">
+            <label>Apellidos:
+                <input type="text" id="apellidos">
+            </label>
+            
+        </div>
+        <br>
+        <div class="campo">
+            <label>Telefono:
+                <input type="tel" id="telefono">
+            </label>
+        </div>
+        <h3 class="errores" id="errorTel"></h3>
+        <br>
+    </form>
+
+    <script>
+
+        let divTel = document.getElementById('errorTel');
+
+        document.addEventListener('change', e => {
+            let campo = e.target;
+            if(campo.matches("#telefono")) {
+                let exp = /^[0-9]{10}$/
+
+                if(!exp.test(campo.value)) {
+                    divTel.textContent = 'El teléfono ingresado no es válido.';
+                } else {
+                    divTel.textContent = '';
+                }
+            }
+        })
+
+    </script>
+</body>
+</html>
