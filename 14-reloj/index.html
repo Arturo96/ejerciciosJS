@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reloj</title>
+</head>
+<body>
+    <h1 style="text-align: center;" class="reloj" id="reloj"></h1>
+
+    <script>
+
+        let reloj = document.getElementById('reloj');
+
+        let horaActual = setInterval(() => {
+            reloj.textContent = new Date().toLocaleTimeString();
+        }, 1000)
+
+        setTimeout(() => {
+            clearInterval(horaActual)
+            reloj.textContent = "Transcurrieron 10 segundos"
+        }, 10000);
+
+    </script>
+</body>
+</html>
