@@ -10,7 +10,8 @@
   --bg-main-title: #ffd600;
   --burger-size: 3rem;
   --color-menu-toggle: #000;
-  --m-burger: 1.5rem; }
+  --m-burger: 1.5rem;
+  --esfera-size: 4rem; }
 
 body {
   font-family: Arial, Helvetica, sans-serif; }
@@ -50,7 +51,8 @@ button[disabled] {
   position: fixed;
   bottom: var(--m-burger);
   right: var(--m-burger);
-  transition: background 0.7s; }
+  transition: background 0.7s;
+  z-index: 100; }
 
 .burger:hover {
   background: rgba(255, 214, 0, 0.8); }
@@ -74,6 +76,7 @@ button[disabled] {
   top: 0;
   right: -100%;
   opacity: 0.9;
+  z-index: 10;
   transition: right 0.5s; }
 
 .menu--link {
@@ -98,3 +101,22 @@ button[disabled] {
 
 .reloj--config button:hover {
   background-color: #8EA4D2; }
+
+/* Esfera */
+.esfera--wrapper {
+  position: relative;
+  width: 90vw;
+  height: 40vh;
+  margin: 1rem auto;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.esfera {
+  position: absolute;
+  width: var(--esfera-size);
+  height: var(--esfera-size);
+  border-radius: 50%;
+  background-color: yellow;
+  transition: all .1s; }
