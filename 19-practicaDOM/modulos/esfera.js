@@ -1,4 +1,5 @@
 export const setEsfera = () => {
+	const nPasos = 20;
 	let d = document;
 	let esferaWrapper = d.getElementById("esferaWrapper"),
 		esfera = d.getElementById("esfera"),
@@ -19,27 +20,29 @@ export const setEsfera = () => {
 	document.addEventListener("keydown", e => {
 		switch (e.key) {
 			case "ArrowRight":
-				if (x + 70 <= esferaWrapperWidth) {
-					x += 10;
+				if (x + 50 + nPasos <= esferaWrapperWidth) {
+					x += nPasos;
 				}
 				esfera.style.setProperty("left", `${x}px`);
 
 				break;
 			case "ArrowLeft":
-				if (x >= 10) {
-					x -= 10;
+				if (x >= nPasos) {
+					x -= nPasos;
 				}
 				esfera.style.setProperty("left", `${x}px`);
 				break;
 			case "ArrowUp":
-				if (y >= 10) {
-					y -= 10;
+				e.preventDefault();
+				if (y >= nPasos) {
+					y -= nPasos;
 				}
 				esfera.style.setProperty("top", `${y}px`);
 				break;
 			case "ArrowDown":
-				if (y + 70 <= esferaWrapperHeight) {
-					y += 10;
+				e.preventDefault();
+				if (y + 60 + nPasos <= esferaWrapperHeight) {
+					y += nPasos;
 				}
 				esfera.style.setProperty("top", `${y}px`);
 				break;
