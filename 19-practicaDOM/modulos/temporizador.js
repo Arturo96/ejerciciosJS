@@ -1,7 +1,7 @@
 export const temporizador = () => {
 	const countdown = document.getElementById("countdown");
 
-	const fechaDada = "2020-09-07 11:10:30";
+	const fechaDada = "2020-09-09 11:10:30";
 
 	let tiempoRestante = "",
 		segundosRestantes = "";

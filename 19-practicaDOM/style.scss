@@ -88,6 +88,20 @@ button[disabled] {
 	}
 }
 
+.scroll-top {
+    right: 5rem !important;
+
+    &--wrapper {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        i {
+            font-size: 2em;
+        }
+    }
+}
+
 /* Menú desplegable */
 
 .menu {

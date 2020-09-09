@@ -66,6 +66,18 @@ button[disabled] {
   left: 50%;
   background: linear-gradient(var(--color-menu-toggle) 20%, transparent 20%, transparent 40%, var(--color-menu-toggle) 40%, var(--color-menu-toggle) 60%, transparent 60%, transparent 80%, var(--color-menu-toggle) 80%); }
 
+.scroll-top {
+  right: 5rem !important; }
+
+.scroll-top--wrapper {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%; }
+
+.scroll-top--wrapper i {
+  font-size: 2em; }
+
 /* Menú desplegable */
 .menu {
   background-color: #333;
