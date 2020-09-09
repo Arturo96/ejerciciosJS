@@ -90,6 +90,7 @@ button[disabled] {
 
 .scroll-top {
     right: 5rem !important;
+    transition: opacity .5s;
 
     &--wrapper {
         position: absolute;

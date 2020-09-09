@@ -67,7 +67,8 @@ button[disabled] {
   background: linear-gradient(var(--color-menu-toggle) 20%, transparent 20%, transparent 40%, var(--color-menu-toggle) 40%, var(--color-menu-toggle) 60%, transparent 60%, transparent 80%, var(--color-menu-toggle) 80%); }
 
 .scroll-top {
-  right: 5rem !important; }
+  right: 5rem !important;
+  transition: opacity .5s; }
 
 .scroll-top--wrapper {
   position: absolute;

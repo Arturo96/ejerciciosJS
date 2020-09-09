@@ -23,9 +23,9 @@ import { temporizador } from "./modulos/temporizador.js";
 
 	document.addEventListener('scroll', e => {
 		if(document.documentElement.scrollTop > 50) {
-			botonTop.style.display = 'block'
+			botonTop.style.opacity = 1;
 		} else {
-			botonTop.style.display = 'none'
+			botonTop.style.opacity = 0;
 		}
 	})
 
