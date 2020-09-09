@@ -11,14 +11,28 @@
   --burger-size: 3rem;
   --color-menu-toggle: #000;
   --m-burger: 1.5rem;
-  --esfera-size: 4rem; }
+  --esfera-size: 4rem;
+  --bg-esfera-wp: #333;
+  --bg-esfera: #ffd600;
+  --bg-icon: #ffd600;
+  --color-icon: #000; }
 
 body {
-  font-family: Arial, Helvetica, sans-serif; }
+  font-family: Arial, Helvetica, sans-serif;
+  transition: all 0.5s; }
+
+.dark {
+  --bg-esfera-wp: #ff8800;
+  --bg-esfera: #333;
+  background-color: #333;
+  color: #ffd600; }
+
+.icon {
+  color: var(--color-menu-toggle); }
 
 button {
   font-size: 1em;
-  padding: .5em;
+  padding: 0.5em;
   border: 1px solid #000;
   border-radius: 5px;
   cursor: pointer;
@@ -31,13 +45,15 @@ button[disabled] {
 .main--title {
   background-color: var(--bg-main-title);
   padding: 0.5em;
-  text-align: center; }
+  text-align: center;
+  color: initial; }
 
 .seccion {
   margin-top: 5rem;
   min-height: 70vh; }
 
-.seccion h2, .seccion h3 {
+.seccion h2,
+.seccion h3 {
   text-align: center;
   margin-top: 1rem; }
 
@@ -68,7 +84,7 @@ button[disabled] {
 
 .scroll-top {
   right: 5rem !important;
-  transition: opacity .5s; }
+  transition: opacity 0.5s; }
 
 .scroll-top--wrapper {
   position: absolute;
@@ -78,6 +94,29 @@ button[disabled] {
 
 .scroll-top--wrapper i {
   font-size: 2em; }
+
+.theme {
+  left: 2rem;
+  background-color: var(--bg-icon) !important; }
+
+.theme:hover {
+  --bg-icon: #000; }
+
+.theme:hover i {
+  --color-icon: #ffd600; }
+
+.theme--wrapper {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%; }
+
+.theme--wrapper i {
+  font-size: 2em;
+  color: var(--color-icon); }
+
+.theme--wrapper i:hover {
+  --color-icon: #ffd600; }
 
 /* Menú desplegable */
 .menu {
@@ -108,12 +147,12 @@ button[disabled] {
   margin: 1rem auto; }
 
 .reloj--config button {
-  background-color: #6279B8;
+  background-color: #6279b8;
   color: #fafafa;
-  transition: background-color .5s; }
+  transition: background-color 0.5s; }
 
 .reloj--config button:hover {
-  background-color: #8EA4D2; }
+  background-color: #8ea4d2; }
 
 /* Esfera */
 .esfera--wrapper {
@@ -121,7 +160,7 @@ button[disabled] {
   width: 90vw;
   height: 40vh;
   margin: 1rem auto;
-  background-color: #333;
+  background-color: var(--bg-esfera-wp);
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -131,8 +170,8 @@ button[disabled] {
   width: var(--esfera-size);
   height: var(--esfera-size);
   border-radius: 50%;
-  background-color: yellow;
-  transition: all .1s; }
+  background-color: var(--bg-esfera);
+  transition: all 0.1s; }
 
 .countdown {
   color: #0d47a1; }

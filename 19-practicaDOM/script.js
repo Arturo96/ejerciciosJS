@@ -5,6 +5,8 @@ import { temporizador } from "./modulos/temporizador.js";
 	console.log(moment("2020-09-09 09:38:00").countdown().toString());
 	let menu = document.getElementById("menu");
 	const botonTop = document.getElementById('scroll-top');
+	const botonTheme = document.getElementById('theme'),
+		  iconTheme = document.getElementById('dark-light');
 
 	document.addEventListener("click", e => {
 		// Menu hamburguesa
@@ -18,6 +20,13 @@ import { temporizador } from "./modulos/temporizador.js";
 				behavior: "smooth",
 				top: 0
 			})
+		}
+
+		// Change Theme
+		if (e.target.matches("#theme, #dark-light")) {
+			iconTheme.classList.toggle('fa-moon');
+			iconTheme.classList.toggle('fa-sun');
+			document.body.classList.toggle('dark')
 		}
 	});
 
