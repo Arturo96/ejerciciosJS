@@ -1,7 +1,6 @@
 import { iniciarReloj, detenerReloj, iniciarAlarma, detenerAlarma } from "./modulos/reloj.js";
 import { setEsfera } from "./modulos/esfera.js";
 import { temporizador } from "./modulos/temporizador.js";
-import {scrollToTop} from './modulos/scrollTop.js';
 (() => {
 	console.log(moment("2020-09-09 09:38:00").countdown().toString());
 	let menu = document.getElementById("menu");
@@ -15,8 +14,10 @@ import {scrollToTop} from './modulos/scrollTop.js';
 
 		// Scroll Top
 		if (e.target.matches("#scroll-top, #arrow-top")) {
-			// document.documentElement.scrollTop = 0;
-			scrollToTop(400);
+			scrollTo({
+				behavior: "smooth",
+				top: 0
+			})
 		}
 	});
 
