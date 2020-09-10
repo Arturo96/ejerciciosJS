@@ -2,6 +2,7 @@ import { iniciarReloj, detenerReloj, iniciarAlarma, detenerAlarma } from "./modu
 import { setEsfera } from "./modulos/esfera.js";
 import { temporizador } from "./modulos/temporizador.js";
 import { changeTheme } from "./modulos/changeTheme.js";
+import { drawElements, responsiveJS } from "./modulos/responsiveJS.js";
 (() => {
 	console.log(moment("2020-09-09 09:38:00").countdown().toString());
 	let menu = document.getElementById("menu");
@@ -45,8 +46,10 @@ import { changeTheme } from "./modulos/changeTheme.js";
 		if(localStorage.getItem("theme")) {
 			changeTheme();
 		}
+		drawElements();
 	})
 
 	setEsfera();
 	temporizador();
+	responsiveJS();
 })();

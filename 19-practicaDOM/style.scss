@@ -222,3 +222,24 @@ button[disabled] {
 .countdown {
 	color: #0d47a1;
 }
+
+.externos {
+	text-align: center;
+
+	a {
+		display: block;
+		text-decoration: none;
+		margin-top: 1rem;
+	}
+}
+
+.contenido {
+	width: max-content;
+	margin: 1rem auto;
+	
+	iframe {
+		display: block;
+		margin: 1rem auto;
+
+	}
+}
