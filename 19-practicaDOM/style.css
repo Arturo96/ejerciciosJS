@@ -21,6 +21,12 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   transition: all 0.5s; }
 
+video {
+  display: block;
+  width: 50%;
+  text-align: center;
+  margin: 1rem auto; }
+
 .show {
   top: 0 !important; }
 
@@ -143,7 +149,11 @@ button[disabled] {
   color: var(--bg-main-title);
   text-decoration: none;
   font-size: 1.25em;
-  padding: 3rem 0; }
+  padding: 1rem 0;
+  transition: background-color .5s; }
+
+.menu--link:hover {
+  background-color: #111; }
 
 .show-menu {
   right: 0; }

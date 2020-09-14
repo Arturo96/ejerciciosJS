@@ -1,3 +1,4 @@
+import { camaraWeb } from "./camaraWeb.js";
 import { devicesDetected } from "./devicesDetected.js";
 import { setEsfera } from "./esfera.js"
 import { estadoConexion } from "./estadoConexion.js";
@@ -12,4 +13,5 @@ export const principal = () => {
     responsiveTester();
     devicesDetected();
     estadoConexion();
+    camaraWeb();
 }
