@@ -1,8 +1,7 @@
 import { iniciarReloj, detenerReloj, iniciarAlarma, detenerAlarma } from "./modulos/reloj.js";
-import { setEsfera } from "./modulos/esfera.js";
-import { temporizador } from "./modulos/temporizador.js";
 import { changeTheme } from "./modulos/changeTheme.js";
-import { drawElements, responsiveJS } from "./modulos/responsiveJS.js";
+import { drawElements } from "./modulos/responsiveJS.js";
+import { principal } from "./modulos/index.js";
 (() => {
 	console.log(moment("2020-09-09 09:38:00").countdown().toString());
 	let menu = document.getElementById("menu");
@@ -49,7 +48,5 @@ import { drawElements, responsiveJS } from "./modulos/responsiveJS.js";
 		drawElements();
 	})
 
-	setEsfera();
-	temporizador();
-	responsiveJS();
+	principal();
 })();

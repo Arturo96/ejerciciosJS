@@ -21,6 +21,9 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   transition: all 0.5s; }
 
+.show {
+  top: 0 !important; }
+
 .dark {
   --bg-esfera-wp: #ff8800;
   --bg-esfera: #333;
@@ -29,6 +32,9 @@ body {
 
 .icon {
   color: var(--color-menu-toggle); }
+
+.thin {
+  font-weight: normal; }
 
 button {
   font-size: 1em;
@@ -191,3 +197,39 @@ button[disabled] {
 .contenido iframe {
   display: block;
   margin: 1rem auto; }
+
+.frmTester {
+  width: max-content;
+  margin: 1rem auto; }
+
+.frmTester input {
+  display: block;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  padding: .5em; }
+
+.frmTester button {
+  transition: background-color .5s; }
+
+.frmTester button:hover {
+  background-color: #ccc; }
+
+.botones {
+  width: max-content;
+  margin: 1rem auto; }
+
+.banner-fixed {
+  opacity: 0.9;
+  color: #fff;
+  padding: 0.5em;
+  position: fixed;
+  margin-top: 0 !important;
+  top: -100%;
+  width: 100%;
+  transition: all .5s; }
+
+.desconectado {
+  background-color: #b71c1c; }
+
+.conectado {
+  background-color: green; }
