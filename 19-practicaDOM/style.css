@@ -250,3 +250,22 @@ button[disabled] {
 .geo p, .geo a {
   margin-top: 1.5rem;
   text-align: center; }
+
+.busqueda {
+  width: max-content;
+  margin: 1rem auto; }
+
+.galeria {
+  width: 90%;
+  max-width: 1200px;
+  margin: 1rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-gap: 4rem; }
+
+.galeria img {
+  width: 100%; }
+
+.galeria h4 {
+  text-align: center;
+  font-size: 1.25em; }

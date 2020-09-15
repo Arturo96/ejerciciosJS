@@ -25,10 +25,12 @@ export const geolocalizacion = () => {
 
 			divsGeo.forEach((medida, i) => (medida.textContent = medidas[i]));
 
-			enlaceMaps.href = `https://www.google.com/maps/@${latitud},${longitud}`;
+			enlaceMaps.href = `https://www.google.com/maps/@${latitud},${longitud},20z`;
 
 			geo.append(enlaceMaps);
-		});
+		}, err => {
+            console.log('Se rechazaron los permisos de geolocalización');
+        });
 	} else {
 		divsGeo.forEach(medida => (medida.textContent = "NO COMPATIBLE"));
 	}

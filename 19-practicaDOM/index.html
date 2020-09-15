@@ -1,158 +1,157 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Práctica DOM</title>
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Práctica DOM</title>
+	</head>
+	<body>
+		<h1 class="main--title">Ejercicios del DOM</h1>
 
-    <h1 class="main--title">Ejercicios del DOM</h1>
+		<nav class="nav">
+			<ul class="menu" id="menu">
+				<li class="menu--item">
+					<a href="#relojDigital" class="menu--link">Reloj Digital y Alarma sonora</a>
+				</li>
+				<li class="menu--item">
+					<a href="#eventosTeclado" class="menu--link">Eventos del Teclado</a>
+				</li>
+				<li class="menu--item">
+					<a href="#conteoAtras" class="menu--link">Countdown</a>
+				</li>
+				<li class="menu--item">
+					<a href="#responsiveConJS" class="menu--link">Responsive con Javascript</a>
+				</li>
+				<li class="menu--item">
+					<a href="#responsiveTester" class="menu--link">Responsive Tester</a>
+				</li>
+				<li class="menu--item">
+					<a href="#dispositivos" class="menu--link">Detección de Dispositivos (User Agent)</a>
+				</li>
+				<li class="menu--item">
+					<a href="#deteccionConexion" class="menu--link">Detección de la conexión</a>
+				</li>
+				<li class="menu--item">
+					<a href="#camaraWeb" class="menu--link">Cámara Web</a>
+				</li>
+				<li class="menu--item">
+					<a href="#geo" class="menu--link">Geolocalización</a>
+				</li>
+				<li class="menu--item">
+					<a href="#" class="menu--link">Sección 5</a>
+				</li>
+			</ul>
+		</nav>
 
-    <nav class="nav">
-        <ul class="menu" id="menu">
-            <li class="menu--item">
-                <a href="#relojDigital" class="menu--link">Reloj Digital y Alarma sonora</a>
-            </li>
-            <li class="menu--item">
-                <a href="#eventosTeclado" class="menu--link">Eventos del Teclado</a>
-            </li>
-            <li class="menu--item">
-                <a href="#conteoAtras" class="menu--link">Countdown</a>
-            </li>
-            <li class="menu--item">
-                <a href="#responsiveConJS" class="menu--link">Responsive con Javascript</a>
-            </li>
-            <li class="menu--item">
-                <a href="#responsiveTester" class="menu--link">Responsive Tester</a>
-            </li>
-            <li class="menu--item">
-                <a href="#dispositivos" class="menu--link">Detección de Dispositivos (User Agent)</a>
-            </li>
-            <li class="menu--item">
-                <a href="#deteccionConexion" class="menu--link">Detección de la conexión</a>
-            </li>
-            <li class="menu--item">
-                <a href="#camaraWeb" class="menu--link">Cámara Web</a>
-            </li>
-            <li class="menu--item">
-                <a href="#geo" class="menu--link">Geolocalización</a>
-            </li>
-            <li class="menu--item">
-                <a href="#" class="menu--link">Sección 5</a>
-            </li>
-        </ul>
-    </nav>
+		<div class="burger" id="burger">
+			<div class="burger--wrapper icon"></div>
+		</div>
 
-    <div class="burger" id="burger">
-        <div class="burger--wrapper icon"></div>
-    </div>
+		<div class="burger scroll-top" id="scroll-top">
+			<div class="scroll-top--wrapper">
+				<i class="fas fa-arrow-up icon" id="arrow-top"></i>
+			</div>
+		</div>
 
-    <div class="burger scroll-top" id="scroll-top">
-        <div class="scroll-top--wrapper">
-            <i class="fas fa-arrow-up icon" id="arrow-top"></i>
-        </div>
-    </div>
+		<div class="burger theme" id="theme">
+			<div class="theme--wrapper">
+				<i class="fas fa-moon icon" id="dark-light"></i>
+			</div>
+		</div>
 
-    <div class="burger theme" id="theme">
-        <div class="theme--wrapper">
-            <i class="fas fa-moon icon" id="dark-light"></i>
-        </div>
-    </div>
+		<section id="relojDigital" class="seccion seccion1">
+			<h2 class="title">Sección 1</h2>
 
-    <section id="relojDigital" class="seccion seccion1">
-        <h2 class="title">Sección 1</h2>
+			<h3>Reloj Digital y Alarma Sonora</h3>
+			<h3 class="reloj" id="reloj"></h3>
 
-        <h3>Reloj Digital y Alarma Sonora</h3>
-        <h3 class="reloj" id="reloj"></h3>
+			<audio src="./audio/It's realme.mp3"></audio>
 
-        <audio src="./audio/It's realme.mp3"></audio>
+			<div class="reloj--config">
+				<button id="iniciarReloj">Iniciar Reloj</button>
+				<button id="detenerReloj" disabled>Detener Reloj</button>
+				<button id="iniciarAlarma">Iniciar Alarma</button>
+				<button id="detenerAlarma">Detener Alarma</button>
+			</div>
+		</section>
+		<section id="eventosTeclado" class="seccion seccion2">
+			<h2 class="title">Eventos del Teclado</h2>
 
-        <div class="reloj--config">
-            <button id="iniciarReloj">Iniciar Reloj</button>
-            <button id="detenerReloj" disabled>Detener Reloj</button>
-            <button id="iniciarAlarma">Iniciar Alarma</button>
-            <button id="detenerAlarma">Detener Alarma</button>
-        </div>
+			<div class="esfera--wrapper" id="esferaWrapper">
+				<div class="esfera" id="esfera"></div>
+			</div>
+		</section>
+		<section id="conteoAtras" class="seccion seccion3">
+			<h2 class="title">Countdown</h2>
+			<h3 class="countdown" id="countdown"></h3>
+		</section>
+		<section class="seccion seccion4" id="responsiveConJS">
+			<h2 class="title">Responsive con Javascript</h2>
+		</section>
+		<section id="responsiveTester" class="seccion seccion5">
+			<h2 class="title">Responsive Tester</h2>
+			<form action="" id="frmTester" class="frmTester">
+				<input type="url" placeholder="URL" id="txtURL" />
+				<input type="text" placeholder="Ancho" id="txtAncho" />
+				<input type="text" placeholder="Alto" id="txtAlto" />
 
-    </section>
-    <section id="eventosTeclado" class="seccion seccion2">
-        <h2 class="title">Eventos del Teclado</h2>
+				<div class="botones">
+					<button type="submit" id="btnProbar">Probar</button>
+					<button type="button" id="btnCerrar">Cerrar</button>
+				</div>
+			</form>
+		</section>
 
-        <div class="esfera--wrapper" id="esferaWrapper"> 
-            <div class="esfera" id="esfera"></div>
-        </div>
-    </section>
-    <section id="conteoAtras" class="seccion seccion3">
-        <h2 class="title">Countdown</h2>
-        <h3 class="countdown" id="countdown"></h3>
-    </section>
-    <section class="seccion seccion4" id="responsiveConJS">
-        <h2 class="title">Responsive con Javascript</h2>
-    </section>
-    <section id="responsiveTester" class="seccion seccion5">
-        <h2 class="title">Responsive Tester</h2>
-        <form action="" id="frmTester" class="frmTester">
-            <input type="url" placeholder="URL" id="txtURL">
-            <input type="text" placeholder="Ancho" id="txtAncho">
-            <input type="text" placeholder="Alto" id="txtAlto">
+		<section id="dispositivos" class="seccion seccion6">
+			<h2 class="title">Detección de dispositivos</h2>
+			<h2 class="title">(User Agent)</h2>
 
-            <div class="botones">
-                <button type="submit" id="btnProbar">Probar</button>
-                <button type="button" id="btnCerrar">Cerrar</button>
-            </div>
-        </form>
-    </section>
+			<h3 class="thin">User Agent: <strong id="navegador--version"></strong></h3>
+			<h3 class="thin">Plataforma: <strong id="navegador--so"></strong></h3>
+			<h3 class="thin">Navegador: <strong id="navegador"></strong></h3>
+		</section>
 
-    <section id="dispositivos" class="seccion seccion6">
-        <h2 class="title">Detección de dispositivos</h2>
-        <h2 class="title">(User Agent)</h2>
+		<section id="deteccionConexion" class="seccion seccion7">
+			<h2 class="title">Detección de la conexión</h2>
 
-        <h3 class="thin">
-            User Agent: <strong id="navegador--version"></strong>
-        </h3>
-        <h3 class="thin">
-            Plataforma: <strong id="navegador--so"></strong>
-        </h3>
-        <h3 class="thin">
-            Navegador: <strong id="navegador"></strong>
-        </h3>
-    </section>
+			<h2 id="banner--disconnect" class="desconectado banner-fixed">Conexión perdida</h2>
+			<h2 id="banner--connect" class="conectado banner-fixed">Conexión restablecida</h2>
+		</section>
 
-    <section id="deteccionConexion" class="seccion seccion7">
-        <h2 class="title">Detección de la conexión</h2>
+		<section class="seccion seccion8" id="camaraWeb">
+			<h2 class="title">Cámara Web</h2>
 
-        
-        <h2 id="banner--disconnect" class="desconectado banner-fixed">Conexión perdida</h2>
-        <h2 id="banner--connect" class="conectado banner-fixed">Conexión restablecida</h2>
-    </section>
+			<video src=""></video>
+		</section>
 
-    <section class="seccion seccion8" id="camaraWeb">
-        <h2 class="title">Cámara Web</h2>
+		<section id="geo" class="seccion geo">
+			<h2 class="title">Geolocalización</h2>
+			<p>Tu posición actual es:</p>
 
-        <video src="" ></video>
-    </section>
+			<p>Latitud: <strong id="latitud"></strong></p>
+			<p>Longitud: <strong id="longitud"></strong></p>
+			<p>Precision: <strong id="precision"></strong> metros</p>
+		</section>
 
-    <section id="geo" class="seccion geo">
-        <h2 class="title">Geolocalización</h2>
-        <p>Tu posición actual es:</p>
+		<section id="filtroImagenes" class="seccion filtroImagenes">
+			<h2 class="title">Filtro de imagenes</h2>
+			<form class="busqueda" id="busqueda">
+				<label
+					>Imagen a buscar:
+					<input type="text" id="buscarImagen" />
+				</label>
+			</form>
 
-        <p>Latitud: <strong id="latitud"></strong></p>
-        <p>Longitud: <strong id="longitud"></strong></p>
-        <p>Precision: <strong id="precision"></strong> metros</p>
+			<div id="galeria" class="galeria">
+				
+			</div>
+		</section>
 
-    </section>
-
-    <section class="seccion seccion10">
-        <h2 class="title"></h2>
-    </section>
-
-
-    <script src="https://kit.fontawesome.com/4087108d66.js" crossorigin="anonymous"></script>
-    <script src="libs/moment.js"></script>
-    <script src="libs/countdown.min.js"></script>
-    <script src="libs/moment-countdown.min.js"></script>
-    <script src="script.js" type="module"></script>
-</body>
+		<script src="https://kit.fontawesome.com/4087108d66.js" crossorigin="anonymous"></script>
+		<script src="libs/moment.js"></script>
+		<script src="libs/countdown.min.js"></script>
+		<script src="libs/moment-countdown.min.js"></script>
+		<script src="script.js" type="module"></script>
+	</body>
 </html>
