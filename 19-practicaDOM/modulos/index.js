@@ -6,6 +6,7 @@ import { filtroImagenes } from "./filtroImagenes.js";
 import { geolocalizacion } from "./geolocalizacion.js";
 import { responsiveJS } from "./responsiveJS.js";
 import { responsiveTester } from "./responsiveTester.js";
+import { sorteoDigital } from "./sorteoDigital.js";
 import { temporizador } from "./temporizador.js";
 
 export const principal = () => {
@@ -18,4 +19,5 @@ export const principal = () => {
     camaraWeb();
     geolocalizacion();
     filtroImagenes();
+    sorteoDigital();
 }

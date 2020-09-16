@@ -273,3 +273,11 @@ button[disabled] {
 
 .card {
   background-color: #ccc; }
+
+.sorteo {
+  margin-top: 3rem !important;
+  width: max-content;
+  margin: 1rem auto; }
+
+.sorteo li, .sorteo button {
+  margin-top: 1rem; }
