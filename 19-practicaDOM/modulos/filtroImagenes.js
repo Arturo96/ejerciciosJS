@@ -10,10 +10,10 @@ const drawAllImages = () => {
 
     imagenes.forEach(imagen => {
         html += `
-                <div class="card">
+                <figure class="card animate__animated animate__fadeIn">
                     <img src="${imagen.url}" />
-                    <h4>${imagen.title}</h4>
-                </div>
+                    <figcaption>${imagen.title}</figcaption>
+                </figure>
         `
     })
 
@@ -30,10 +30,10 @@ const drawFilteredImages = criterio => {
 
     resultado.forEach(imagen => {
         html += `
-                <div class="card">
+                <figure class="card animate__animated animate__fadeIn">
                     <img src="${imagen.url}" />
-                    <h4>${imagen.title}</h4>
-                </div>
+                    <figcaption>${imagen.title}</figcaption>
+                </figure>
         `
     })
 

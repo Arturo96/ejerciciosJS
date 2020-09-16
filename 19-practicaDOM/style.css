@@ -266,6 +266,10 @@ button[disabled] {
 .galeria img {
   width: 100%; }
 
-.galeria h4 {
+.galeria figcaption {
   text-align: center;
-  font-size: 1.25em; }
+  font-size: 1.25em;
+  padding: 1rem 0; }
+
+.card {
+  background-color: #ccc; }
