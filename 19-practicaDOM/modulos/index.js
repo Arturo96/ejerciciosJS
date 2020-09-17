@@ -7,6 +7,7 @@ import { geolocalizacion } from "./geolocalizacion.js";
 import { responsiveJS } from "./responsiveJS.js";
 import { responsiveSlider } from "./responsiveSlider.js";
 import { responsiveTester } from "./responsiveTester.js";
+import { smartVideoFunc } from "./smartVideo.js";
 import { sorteoDigital } from "./sorteoDigital.js";
 import { temporizador } from "./temporizador.js";
 
@@ -22,4 +23,5 @@ export const principal = () => {
     filtroImagenes();
     sorteoDigital();
     responsiveSlider();
+    smartVideoFunc();
 }

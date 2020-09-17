@@ -199,7 +199,7 @@ button[disabled] {
 		color: var(--bg-main-title);
 		text-decoration: none;
 		font-size: 1.25em;
-		padding: 1rem 0;
+		padding: .75rem 0;
 		transition: background-color .5s;
 
 		&:hover {
@@ -417,6 +417,12 @@ button[disabled] {
 		padding: 0 3rem;
 		font-size: 3em;
 		font-weight: bold;
+	}
+}
+
+.smartVideo {
+	video {
+		width: 75%;
 	}
 }
 
