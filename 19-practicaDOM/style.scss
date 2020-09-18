@@ -199,7 +199,7 @@ button[disabled] {
 		color: var(--bg-main-title);
 		text-decoration: none;
 		font-size: 1.25em;
-		padding: .75rem 0;
+		padding: .65rem 0;
 		transition: background-color .5s;
 
 		&:hover {
@@ -426,7 +426,7 @@ button[disabled] {
 	}
 }
 
-.frmContacto {
+.frmContacto, .frmNarrar {
 	width: 80%;
 	margin: 1rem auto;
 	padding-bottom: 2rem;
@@ -483,6 +483,8 @@ button[disabled] {
 	opacity: 1;
 	display: block;
 }
+
+
 
 
 

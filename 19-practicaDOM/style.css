@@ -152,7 +152,7 @@ button[disabled] {
   color: var(--bg-main-title);
   text-decoration: none;
   font-size: 1.25em;
-  padding: .75rem 0;
+  padding: .65rem 0;
   transition: background-color .5s; }
 
 .menu--link:hover {
@@ -338,12 +338,12 @@ button[disabled] {
 .smartVideo video {
   width: 50%; }
 
-.frmContacto {
+.frmContacto, .frmNarrar {
   width: 80%;
   margin: 1rem auto;
   padding-bottom: 2rem; }
 
-.frmContacto input, .frmContacto textarea {
+.frmContacto input, .frmContacto textarea, .frmNarrar input, .frmNarrar textarea {
   display: block;
   width: 100%;
   margin-top: 1rem;
@@ -352,13 +352,13 @@ button[disabled] {
   resize: none;
   border-radius: 5px; }
 
-.frmContacto input {
+.frmContacto input, .frmNarrar input {
   padding: 0.5em; }
 
-.frmContacto textarea {
+.frmContacto textarea, .frmNarrar textarea {
   padding: 0.75em; }
 
-.frmContacto button {
+.frmContacto button, .frmNarrar button {
   display: block;
   width: 30%;
   margin: 1rem auto;
