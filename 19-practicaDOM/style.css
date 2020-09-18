@@ -336,4 +336,51 @@ button[disabled] {
   font-weight: bold; }
 
 .smartVideo video {
-  width: 75%; }
+  width: 50%; }
+
+.frmContacto {
+  width: 80%;
+  margin: 1rem auto;
+  padding-bottom: 2rem; }
+
+.frmContacto input, .frmContacto textarea {
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+  font-size: 1em;
+  font-family: inherit;
+  resize: none;
+  border-radius: 5px; }
+
+.frmContacto input {
+  padding: 0.5em; }
+
+.frmContacto textarea {
+  padding: 0.75em; }
+
+.frmContacto button {
+  display: block;
+  width: 30%;
+  margin: 1rem auto;
+  border-radius: 10px; }
+
+.error {
+  opacity: 0;
+  transition: opacity .5s; }
+
+.error h3 {
+  background-color: red;
+  color: #fff;
+  margin-top: 0; }
+
+.contacto-loader, .contacto-response {
+  opacity: 0;
+  display: none; }
+
+.contacto-loader img, .contacto-response img {
+  display: block;
+  margin: 1rem auto; }
+
+.showError, .showElement {
+  opacity: 1;
+  display: block; }

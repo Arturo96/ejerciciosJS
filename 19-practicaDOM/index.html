@@ -51,10 +51,9 @@
 				<li class="menu--item">
 					<a href="#smartVideo" class="menu--link">Video inteligente</a>
 				</li>
-				<!-- <li class="menu--item">
-					<a href="#sorteo" class="menu--link">Sorteo digital</a>
-				</li> -->
-				
+				<li class="menu--item">
+					<a href="#contacto" class="menu--link">Formulario de Contacto (Validaciones)</a>
+				</li>
 			</ul>
 		</nav>
 
@@ -184,24 +183,32 @@
 			<div class="slider">
 				<div class="slider-slides">
 					<div class="slider-slide">
-						<img src="https://placeimg.com/400/400/animals" alt="animales">
+						<img src="https://placeimg.com/400/400/animals" alt="animales" />
 					</div>
 					<div class="slider-slide">
 						<h4>Diapositiva 2</h4>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius possimus omnis cum! Commodi optio beatae consectetur a rem ex facilis aliquid veritatis amet eligendi, minus quae possimus aspernatur nam alias.</p>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius possimus omnis cum!
+							Commodi optio beatae consectetur a rem ex facilis aliquid veritatis amet eligendi,
+							minus quae possimus aspernatur nam alias.
+						</p>
 					</div>
 					<div class="slider-slide">
-						<img src="https://placeimg.com/400/400/nature" alt="nature">
+						<img src="https://placeimg.com/400/400/nature" alt="nature" />
 					</div>
 					<div class="slider-slide">
 						<h4>Diapositiva 4</h4>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius possimus omnis cum! Commodi optio beatae consectetur a rem ex facilis aliquid veritatis amet eligendi, minus quae possimus aspernatur nam alias.</p>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius possimus omnis cum!
+							Commodi optio beatae consectetur a rem ex facilis aliquid veritatis amet eligendi,
+							minus quae possimus aspernatur nam alias.
+						</p>
 					</div>
 					<div class="slider-slide">
-						<img src="https://placeimg.com/400/400/food" alt="food">
+						<img src="https://placeimg.com/400/400/food" alt="food" />
 					</div>
 					<div class="slider-slide">
-						<img src="https://placeimg.com/400/400/house" alt="house">
+						<img src="https://placeimg.com/400/400/house" alt="house" />
 					</div>
 				</div>
 				<div class="slider-btns">
@@ -215,11 +222,49 @@
 			<h2>Video inteligente</h2>
 
 			<video id="player" src="videos/VID_1.mp4" controls muted loop></video>
-			 
-			 <!-- <button id="player-button" type="button">Play video</button> -->
 		</section>
 
-		<section id="" class="seccion"></section>
+		<section id="contacto" class="seccion contacto">
+			<h2>Formulario de Contacto (Validaciones)</h2>
+			<br />
+			<h2>Envianos tus comentarios</h2>
+
+			<form id="frmContacto" class="frmContacto">
+				<div class="form-group">
+					<input id="txtNombre" type="text" placeholder="Escribe tu nombre..." />
+				</div>
+				<div id="errorNombre" class="error">
+					<h3>El nombre ingresado no es válido.</h3>
+				</div>
+				<div class="form-group">
+					<input id="txtCorreo" type="email" placeholder="Escribe tu correo..." />
+				</div>
+				<div id="errorCorreo" class="error">
+					<h3>El correo ingresado no es válido.</h3>
+				</div>
+				<div class="form-group">
+					<input id="txtAsunto" type="text" placeholder="Asunto a tratar..." />
+				</div>
+				<div id="errorAsunto" class="error">
+					<h3>El asunto no debe quedar vacío.</h3>
+				</div>
+				<div class="form-group">
+					<textarea id="txtComments" cols="30" rows="5" placeholder="Escribe tus comentarios..."></textarea>
+				</div>
+				<div id="errorComments" class="error">
+					<h3>Los comentarios no deben exceder los 255 caracteres.</h3>
+				</div>
+
+				<button type="submit">Enviar</button>
+
+				<div id="contactoLoader" class="contacto-loader">
+					<img src="img/puff.svg" alt="loader">
+				</div>
+				<div id="contactoResponse" class="contacto-response">
+					<h3>Los datos fueron enviados.</h3>
+				</div>
+			</form>
+		</section>
 
 		<script src="https://kit.fontawesome.com/4087108d66.js" crossorigin="anonymous"></script>
 		<script src="libs/moment.js"></script>

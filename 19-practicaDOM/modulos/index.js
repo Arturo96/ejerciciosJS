@@ -10,6 +10,7 @@ import { responsiveTester } from "./responsiveTester.js";
 import { smartVideoFunc } from "./smartVideo.js";
 import { sorteoDigital } from "./sorteoDigital.js";
 import { temporizador } from "./temporizador.js";
+import { validarFrm } from "./validarFrm.js";
 
 export const principal = () => {
     setEsfera();
@@ -24,4 +25,5 @@ export const principal = () => {
     sorteoDigital();
     responsiveSlider();
     smartVideoFunc();
+    validarFrm();
 }
