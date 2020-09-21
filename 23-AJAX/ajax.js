@@ -58,6 +58,7 @@ const d = document,
 	mostrarInfo();
 })(); */
 
+// Axios
 (() => {
 	const mostrarInfo = () => {
 		let posts = axios
