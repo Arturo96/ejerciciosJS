@@ -1,0 +1,56 @@
+{
+  "celulares": [
+    {
+      "id": 1,
+      "marca": "Realme",
+      "modelo": "RMX2001"
+    },
+    {
+      "id": 2,
+      "marca": "Xiaomi",
+      "modelo": "Poco X3"
+    },
+    {
+      "id": 3,
+      "marca": "Samsung",
+      "modelo": "Galaxy A51"
+    },
+    {
+      "marca": "Realme",
+      "modelo": "6 Pro",
+      "id": 4
+    }
+  ],
+  "pcs": [
+    {
+      "id": 1,
+      "marca": "Asus",
+      "modelo": "TUF GAMING FX505",
+      "cpu": "Ryzen 7 4800H",
+      "rom": "512 GB SSD",
+      "grafica": "Nvidia RTX 2060",
+      "pantalla": "IPS",
+      "tasa": "120 Hz"
+    },
+    {
+      "id": 2,
+      "marca": "Acer",
+      "modelo": "Predator",
+      "cpu": "Intel Core i7-10700U",
+      "rom": "512 GB SSD",
+      "grafica": "Nvidia RTX 2060",
+      "pantalla": "IPS",
+      "tasa": "144 Hz"
+    },
+    {
+      "id": 3,
+      "marca": "Asus",
+      "modelo": "TUF GAMING FX707",
+      "cpu": "Ryzen 7 4800H",
+      "rom": "1 TB SSD",
+      "grafica": "Nvidia RTX 2060",
+      "pantalla": "IPS",
+      "tasa": "144 Hz"
+    }
+  ]
+}

@@ -58,10 +58,10 @@ const d = document,
 	mostrarInfo();
 })(); */
 
-// Axios
+/* Axios
 (() => {
 	const mostrarInfo = () => {
-		let posts = axios
+			axios
 			.get(URL)
 			.then(posts => {
 				let html = "";
@@ -78,6 +78,28 @@ const d = document,
 				ajax.innerHTML = `<li>Error ${err.response.status}: ${message}</li>`;
 			});
 
+	};
+
+	mostrarInfo();
+})(); */
+
+// Axios con Async Await
+(() => {
+	const mostrarInfo = async () => {
+		try {
+			const posts = await axios.get(URL);
+			let html = "";
+			posts.data.forEach(post => {
+				html += `<li>${post.id} - ${post.title} </li>`;
+			});
+
+			ajax.innerHTML = html;
+		} catch (err) {
+			console.log(err.response);
+			const message = err.response.statusText || "Se produjo un error.";
+
+			ajax.innerHTML = `<li>Error ${err.response.status}: ${message}</li>`;
+		}
 	};
 
 	mostrarInfo();
