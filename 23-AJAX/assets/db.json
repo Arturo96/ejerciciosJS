@@ -1,9 +1,9 @@
 {
   "celulares": [
     {
-      "id": 1,
       "marca": "Realme",
-      "modelo": "RMX2001"
+      "modelo": "6s",
+      "id": 1
     },
     {
       "id": 2,
@@ -19,6 +19,11 @@
       "marca": "Realme",
       "modelo": "6 Pro",
       "id": 4
+    },
+    {
+      "marca": "Realme",
+      "modelo": "5",
+      "id": 5
     }
   ],
   "pcs": [

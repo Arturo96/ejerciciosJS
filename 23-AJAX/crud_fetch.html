@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CRUD con FETCH</title>
+</head>
+<body>
+    <header>
+        <h1>CRUD con FETCH</h1>
+    </header>
+
+    <main>
+
+        <form class="frmCelular" id="frmCelular" method="POST">
+            <h2>Ingreso de celulares</h2>
+
+            <input type="hidden" name="idCelular" value="0">
+
+            <div class="form-group">
+                <label>Ingrese marca:
+                    <input type="text" name="marca" id="txtMarca">
+                </label>
+            </div>
+            <div class="form-group">
+                <label>Ingrese modelo:
+                    <input type="text" name="modelo" id="txtModelo">
+                </label>
+            </div>
+            
+            <div class="form-group">
+                <button type="submit">Enviar</button>
+                <button type="reset">Limpiar</button>
+                <button id="btnUpdateCel" type="button">Actualizar</button>
+            </div>
+        </form>
+
+        <table>
+            <thead>
+                <th>ID</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Acción</th>
+            </thead>
+            <tbody id="listaCelulares">
+        
+            </tbody>
+        </table>
+    </main>
+    
+
+    <script src="js/crud_fetch.js"></script>
+</body>
+</html>
