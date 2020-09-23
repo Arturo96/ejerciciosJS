@@ -1,11 +1,6 @@
 {
   "celulares": [
     {
-      "marca": "Realme",
-      "modelo": "6s",
-      "id": 1
-    },
-    {
       "id": 2,
       "marca": "Xiaomi",
       "modelo": "Poco X3"
