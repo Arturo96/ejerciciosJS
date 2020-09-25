@@ -48,32 +48,59 @@ export const validarFrm = () => {
 		}
 	});
 
-	frmContacto.addEventListener("submit", e => {
-		let numErrores = 0;
+	frmContacto.addEventListener("submit", async e => {
 		e.preventDefault();
+		const contactoLoader = d.getElementById("contactoLoader");
+		const contactoResponse = d.getElementById("contactoResponse");
 
-		let nombre = d.getElementById("txtNombre").value.trim();
-		if (nombre.length === 0) errorNombre.classList.add("showError");
+		contactoLoader.classList.add("showElement");
 
-		let correo = d.getElementById("txtCorreo").value.trim();
-		if (correo.length === 0) errorCorreo.classList.add("showError");
-		let asunto = d.getElementById("txtAsunto").value.trim();
-		if (asunto.length === 0) errorAsunto.classList.add("showError");
-		let comentarios = d.getElementById("txtComments").value.trim();
+		try {
+			const URL =
+					"https://formsubmit.co/ajax/sagptt@gmail.com",
+				res = await fetch(URL, {
+					method: 'POST',
+					body: new FormData(e.target)
+				}),
+				datos = await res.json();
 
-		numErrores += d.querySelectorAll(".showError").length;
+			if (!res.ok) throw { status: res.status, statusText: res.statusText };
 
-		if (numErrores === 0) {
-			const contactoLoader = d.getElementById("contactoLoader");
-			const contactoResponse = d.getElementById("contactoResponse");
-
-			contactoLoader.classList.add("showElement");
-
-			setTimeout(() => {
-				contactoLoader.classList.remove("showElement");
-				contactoResponse.classList.add("showElement");
-				e.target.reset();
-			}, 3000)
+			contactoLoader.classList.remove("showElement");
+			contactoResponse.children[0].textContent = datos.message;
+			contactoResponse.classList.add("showElement");
+		} catch (err) {
+			const message = err.statusText || `Ocurrió un error`;
+			console.log(`Error ${err.status}: `);
+		} finally {
+			e.target.reset();
 		}
+
+		// 	let numErrores = 0;
+		// 	e.preventDefault();
+
+		// 	let nombre = d.getElementById("txtNombre").value.trim();
+		// 	if (nombre.length === 0) errorNombre.classList.add("showError");
+
+		// 	let correo = d.getElementById("txtCorreo").value.trim();
+		// 	if (correo.length === 0) errorCorreo.classList.add("showError");
+		// 	let asunto = d.getElementById("txtAsunto").value.trim();
+		// 	if (asunto.length === 0) errorAsunto.classList.add("showError");
+		// 	let comentarios = d.getElementById("txtComments").value.trim();
+
+		// 	numErrores += d.querySelectorAll(".showError").length;
+
+		// 	if (numErrores === 0) {
+		// 		const contactoLoader = d.getElementById("contactoLoader");
+		// 		const contactoResponse = d.getElementById("contactoResponse");
+
+		// 		contactoLoader.classList.add("showElement");
+
+		// 		setTimeout(() => {
+		// 			contactoLoader.classList.remove("showElement");
+		// 			contactoResponse.classList.add("showElement");
+		// 			e.target.reset();
+		// 		}, 3000)
+		// 	}
 	});
 };

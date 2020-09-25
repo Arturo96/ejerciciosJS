@@ -232,27 +232,38 @@
 			<br />
 			<h2>Envianos tus comentarios</h2>
 
-			<form id="frmContacto" class="frmContacto">
+			<form
+				id="frmContacto"
+				class="frmContacto"
+				action="https://formsubmit.co/61fa82d3941c7dcb18a3e260407b7233"
+				method="POST"
+			>
 				<div class="form-group">
-					<input id="txtNombre" type="text" placeholder="Escribe tu nombre..." />
+					<input id="txtNombre" type="text" name="name" placeholder="Escribe tu nombre..." />
 				</div>
 				<div id="errorNombre" class="error">
 					<h3>El nombre ingresado no es válido.</h3>
 				</div>
 				<div class="form-group">
-					<input id="txtCorreo" type="email" placeholder="Escribe tu correo..." />
+					<input id="txtCorreo" type="email" name="email" placeholder="Escribe tu correo..." />
 				</div>
 				<div id="errorCorreo" class="error">
 					<h3>El correo ingresado no es válido.</h3>
 				</div>
 				<div class="form-group">
-					<input id="txtAsunto" type="text" placeholder="Asunto a tratar..." />
+					<input id="txtAsunto" type="text" name="asunto" placeholder="Asunto a tratar..." />
 				</div>
 				<div id="errorAsunto" class="error">
 					<h3>El asunto no debe quedar vacío.</h3>
 				</div>
 				<div class="form-group">
-					<textarea id="txtComments" cols="30" rows="5" placeholder="Escribe tus comentarios..."></textarea>
+					<textarea
+						id="txtComments"
+						cols="30"
+						rows="5"
+						name="comments"
+						placeholder="Escribe tus comentarios..."
+					></textarea>
 				</div>
 				<div id="errorComments" class="error">
 					<h3>Los comentarios no deben exceder los 255 caracteres.</h3>
@@ -261,7 +272,7 @@
 				<button type="submit">Enviar</button>
 
 				<div id="contactoLoader" class="contacto-loader">
-					<img src="img/puff.svg" alt="loader">
+					<img src="img/puff.svg" alt="loader" />
 				</div>
 				<div id="contactoResponse" class="contacto-response">
 					<h3>Los datos fueron enviados.</h3>
@@ -274,12 +285,15 @@
 
 			<form class="frmNarrar" id="frmNarrar">
 				<select id="voces-container"></select>
-				<textarea id="texto" cols="10" rows="5"
-				placeholder="Escribe el texto a leer..." required></textarea>
+				<textarea
+					id="texto"
+					cols="10"
+					rows="5"
+					placeholder="Escribe el texto a leer..."
+					required
+				></textarea>
 				<button type="submit">Leer</button>
-
 			</form>
-
 		</section>
 
 		<script src="https://kit.fontawesome.com/4087108d66.js" crossorigin="anonymous"></script>
