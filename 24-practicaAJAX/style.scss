@@ -27,6 +27,8 @@ h1 {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
     background-color: var(--bg-it);
     color: var(--color-it);
@@ -62,6 +64,7 @@ body {
 }
 
 .content {
+    flex-grow: 1;
     margin-top: 5rem;
     padding: 2rem;
 
@@ -75,5 +78,16 @@ body {
     h2 {
         text-align: center;
         font-size: 2em;
+    }
+}
+
+footer {
+    background-color: var(--color-it);
+    color: var(--bg-it);
+    text-align: center;
+
+    h3 {
+        font-size: 1.5em;
+        padding: .5em 0;
     }
 }
