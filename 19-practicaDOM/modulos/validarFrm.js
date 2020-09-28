@@ -71,7 +71,7 @@ export const validarFrm = () => {
 			contactoResponse.classList.add("showElement");
 		} catch (err) {
 			const message = err.statusText || `Ocurrió un error`;
-			console.log(`Error ${err.status}: `);
+			console.log(`Error ${err.status}: ${message}`);
 		} finally {
 			e.target.reset();
 		}
