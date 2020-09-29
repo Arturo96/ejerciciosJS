@@ -49,6 +49,12 @@ button {
     box-shadow: 1px 1px 3px #000;
     border-radius: 10px;
     overflow: hidden;
+    transition: transform .5s;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.15,1.15);
+    }
 
     img {
         width: 100%;

@@ -1,4 +1,4 @@
 export default {
-    public: 'Public',
-    secret: 'Secret'
+    public: 'pk_',
+    secret: 'sk_'
 }

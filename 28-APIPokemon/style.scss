@@ -1,0 +1,42 @@
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    width: auto;
+}
+
+nav {
+    text-align: center;
+}
+
+.pokemons {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-gap: 1.5rem;
+    padding: 2rem;
+}
+
+.pokemon {
+    background-color: yellow;
+    font-weight: bold;
+    text-align: center;
+}
+
+.prev, .next {
+    display: none;
+}
+
+.show {
+    display: initial;
+}
