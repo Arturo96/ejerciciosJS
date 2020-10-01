@@ -1,7 +1,8 @@
 const d = document,
     divPokemons = d.getElementById("pokemons"),
     prev = d.getElementById("prev"),
-    next = d.getElementById("next");
+	next = d.getElementById("next"),
+	loader = d.getElementById("loader");
 
 let URLinit = "https://pokeapi.co/api/v2/pokemon",
     URLprev = "", URLnext = "";
@@ -12,6 +13,8 @@ const capitalizar = cadena => {
 
 const cargarPokemons = async (URL) => {
 	try {
+		divPokemons.classList.remove("showPokemons");
+		loader.classList.add("show");
 		const res = await fetch(URL),
 			json = await res.json(),
 			pokemons = await json.results;
@@ -43,7 +46,7 @@ const cargarPokemons = async (URL) => {
 				html += `
                     <figure class="pokemon">
                         <img src="${img}" alt="${name}">
-                        <caption>${capitalizar(name)}</caption>
+                        <figcaption>${capitalizar(name)}</figcaption>
                     </figure>
                 `;
 			} catch (err) {
@@ -56,6 +59,9 @@ const cargarPokemons = async (URL) => {
 		const message = err.statusText || `Ocurrió un error`;
 
 		console.log(`Error ${err.status}: ${message}`);
+	} finally {
+		loader.classList.remove("show")
+		divPokemons.classList.add("showPokemons")
 	}
 };
 

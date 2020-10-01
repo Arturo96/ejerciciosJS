@@ -11,6 +11,11 @@ html {
     padding: 0;
 }
 
+h1 {
+    text-align: center;
+    margin: 2rem 0;
+}
+
 img {
     max-width: 100%;
     width: auto;
@@ -21,10 +26,12 @@ nav {
 }
 
 .pokemons {
+    opacity: 0;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     grid-gap: 1.5rem;
     padding: 2rem;
+    transition: opacity .5s;
 }
 
 .pokemon {
@@ -37,6 +44,22 @@ nav {
     display: none;
 }
 
+.loader {
+    display: none;
+
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 .show {
     display: initial;
 }
+
+.showPokemons {
+    // display: grid;
+    opacity: 1;
+}
+

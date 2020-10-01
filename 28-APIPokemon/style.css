@@ -9,6 +9,10 @@ html {
   margin: 0;
   padding: 0; }
 
+h1 {
+  text-align: center;
+  margin: 2rem 0; }
+
 img {
   max-width: 100%;
   width: auto; }
@@ -17,10 +21,12 @@ nav {
   text-align: center; }
 
 .pokemons {
+  opacity: 0;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   grid-gap: 1.5rem;
-  padding: 2rem; }
+  padding: 2rem;
+  transition: opacity .5s; }
 
 .pokemon {
   background-color: yellow;
@@ -30,5 +36,16 @@ nav {
 .prev, .next {
   display: none; }
 
+.loader {
+  display: none; }
+
+.loader img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
 .show {
   display: initial; }
+
+.showPokemons {
+  opacity: 1; }
