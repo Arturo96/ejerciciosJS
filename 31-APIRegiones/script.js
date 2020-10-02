@@ -31,7 +31,7 @@ const cargarAJAX = async (URL, recurso) => {
     try {
         const res = await fetch(URL),
             json = await res.json(),
-            datos = await json.response[recurso];
+            datos = await json.response[recurso].sort();
 
             if(!res.ok) throw res;
 
